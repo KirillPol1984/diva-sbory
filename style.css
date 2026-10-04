@@ -1667,3 +1667,42 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 
   body.панель-с-переходом .липкая-кнопка { transition: none; }
 }
+
+/* экран 02 */
+#экран-02.светлый { border-top: 10px solid var(--цвет-тёмный-фон); }
+  #экран-02.тёмный { border-top: 10px solid var(--цвет-тёмный-фон); }
+  #экран-02 .витрина { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--отступ-блока); margin-top: clamp(32px, 4vw, 48px); }
+  #экран-02 .товар { flex: 0 1 calc((100% - 2 * var(--отступ-блока)) / 3); display: flex; flex-direction: column; gap: 12px;
+      padding: 16px 16px 20px; border-radius: var(--радиус-карточки); text-align: center; }
+  #экран-02 .товар .заглушка-картинки { aspect-ratio: 1 / 1; border-radius: var(--радиус-малый); }
+  #экран-02 .товар__имя { margin: 8px 0 0; font-size: var(--кегль-лид); font-weight: 700; }
+  #экран-02 .товар__ощущение { margin: 0; flex: 1; font-size: var(--кегль-текст); line-height: 1.5; }
+  #экран-02 .товар__цена { margin: 0; font-size: var(--кегль-цифра); font-weight: 800; line-height: 1.1; }
+  #экран-02 .товар__цена span { display: block; margin-top: 2px; font-size: var(--кегль-мелкий); font-weight: 400; }
+  #экран-02 .товар .кнопка { width: 100%; border-radius: var(--кнопка-радиус); font-size: var(--кегль-мелкий); box-shadow: none; }
+  #экран-02 .пояснение { margin: clamp(24px, 3vw, 36px) 0 0; text-align: center; font-size: var(--кегль-мелкий); }
+  #экран-02 .действие-секции { display: flex; justify-content: center; margin-top: 20px; }
+
+  #экран-02.светлый .товар { background: var(--цвет-фон-карточки); border: 1px solid var(--цвет-линия); box-shadow: var(--тень); }
+  #экран-02.светлый .товар__имя { color: var(--цвет-текст); }
+  #экран-02.светлый .товар__ощущение, #экран-02.светлый .товар__цена span, #экран-02.светлый .пояснение { color: var(--цвет-текст-мягкий); }
+  #экран-02.светлый .товар__цена { color: var(--цвет-акцент); }
+  #экран-02.светлый .товар .кнопка { background: var(--цвет-акцент); color: var(--цвет-на-акценте); }
+  #экран-02.светлый .товар .кнопка:hover { background: var(--цвет-акцент-глубже); }
+
+  #экран-02.тёмный .товар { background: color-mix(in srgb, var(--цвет-тёмный-текст) 7%, transparent); border: 1px solid color-mix(in srgb, var(--цвет-тёмный-текст) 16%, transparent); }
+  #экран-02.тёмный .товар__имя { color: var(--цвет-тёмный-текст); }
+  #экран-02.тёмный .товар__ощущение, #экран-02.тёмный .товар__цена span, #экран-02.тёмный .пояснение { color: color-mix(in srgb, var(--цвет-тёмный-текст) 80%, transparent); }
+  #экран-02.тёмный .товар__цена { color: var(--цвет-акцент-яркий); }
+  #экран-02.тёмный .товар .кнопка { background: var(--цвет-акцент-яркий); color: var(--цвет-тёмный-фон); }
+
+  @media (max-width: 899px) { #экран-02 .товар { flex-basis: calc((100% - var(--отступ-блока)) / 2); } }
+  @media (max-width: 539px) {
+    #экран-02 .товар { flex-basis: 100%; display: grid; grid-template-columns: 104px 1fr; column-gap: 14px; row-gap: 6px;
+        text-align: left; padding: 14px; }
+    #экран-02 .товар .заглушка-картинки { grid-row: span 3; min-height: 0; align-self: start; }
+    #экран-02 .товар__имя { margin: 0; }
+    #экран-02 .товар__цена { font-size: var(--кегль-лид); }
+    #экран-02 .товар__цена span { display: inline; margin-left: 4px; }
+    #экран-02 .товар .кнопка { grid-column: 1 / -1; margin-top: 8px; }
+  }
