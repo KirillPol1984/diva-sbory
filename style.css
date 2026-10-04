@@ -1765,6 +1765,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-04 .портрет { max-width: 420px; }
   }
   @media (max-width: 539px) {
+    #экран-04 .кикер-линия { font-size: var(--кегль-текст); }
     #экран-04 .вехи { display: grid; gap: 12px; }
     #экран-04 .веха, #экран-04 .веха:first-child { padding: 0 0 0 14px; }
     #экран-04.тёмный .веха { border-left: 1px solid color-mix(in srgb, var(--цвет-тёмный-текст) 22%, transparent); }
