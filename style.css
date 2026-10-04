@@ -1770,3 +1770,35 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
     #экран-04.тёмный .веха { border-left: 1px solid color-mix(in srgb, var(--цвет-тёмный-текст) 22%, transparent); }
     #экран-04.светлый .веха { border-left: 1px solid var(--цвет-линия); }
   }
+
+/* экран 05 */
+#экран-05 .способы { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--отступ-блока); margin-top: clamp(28px, 3.5vw, 44px); }
+  #экран-05 .способ { display: flex; align-items: center; gap: 14px; padding: 20px 22px; border-radius: var(--радиус-карточки); }
+  #экран-05 .способ .иконка { width: 26px; height: 26px; flex: none; }
+  #экран-05 .способ b { display: block; font-size: var(--кегль-лид); }
+  #экран-05 .способ span { display: block; font-size: var(--кегль-мелкий); font-style: italic; }
+  #экран-05 .плита { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 24px 40px; margin-top: var(--отступ-блока);
+      padding: clamp(28px, 4vw, 48px); border-radius: var(--радиус-плитки); }
+  #экран-05 .плита b { display: block; font-size: var(--кегль-цифра); line-height: 1.2; margin-bottom: 8px; }
+  #экран-05 .плита p { margin: 0; font-size: var(--кегль-лид); line-height: 1.5; }
+
+  #экран-05.светлый .способ { background: var(--цвет-фон-карточки); border: 1px solid var(--цвет-линия); box-shadow: var(--тень); }
+  #экран-05.светлый .способ .иконка { color: var(--цвет-акцент); }
+  #экран-05.светлый .способ b { color: var(--цвет-текст); }
+  #экран-05.светлый .способ span { color: var(--цвет-текст-тихий); }
+  #экран-05.светлый .плита { background: var(--цвет-тёмный-фон); box-shadow: var(--тень-глубокая); }
+  #экран-05.светлый .плита b { color: var(--цвет-тёмный-текст); }
+  #экран-05.светлый .плита p { color: color-mix(in srgb, var(--цвет-тёмный-текст) 82%, transparent); }
+
+  #экран-05.тёмный .способ { background: color-mix(in srgb, var(--цвет-тёмный-текст) 7%, transparent); border: 1px solid color-mix(in srgb, var(--цвет-тёмный-текст) 16%, transparent); }
+  #экран-05.тёмный .способ .иконка { color: var(--цвет-акцент-яркий); }
+  #экран-05.тёмный .способ b { color: var(--цвет-тёмный-текст); }
+  #экран-05.тёмный .способ span { color: color-mix(in srgb, var(--цвет-тёмный-текст) 60%, transparent); }
+  #экран-05.тёмный .плита { background: var(--цвет-фон); }
+  #экран-05.тёмный .плита b { color: var(--цвет-текст); }
+  #экран-05.тёмный .плита p { color: var(--цвет-текст-мягкий); }
+
+  @media (max-width: 899px) {
+    #экран-05 .способы { grid-template-columns: 1fr; }
+    #экран-05 .плита { grid-template-columns: 1fr; }
+  }
