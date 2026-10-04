@@ -1723,3 +1723,50 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   @media (max-width: 899px) {
     #экран-03 .место { aspect-ratio: 4 / 3; }
   }
+
+/* экран 04 */
+#экран-04 .разворот { display: grid; grid-template-columns: 7fr 5fr; gap: clamp(32px, 5vw, 72px); align-items: center; }
+  #экран-04 .рассказ { display: grid; gap: 14px; }
+  #экран-04 .рассказ h2, #экран-04 .рассказ p { margin: 0; }
+  #экран-04 .кикер-линия { display: flex; align-items: center; gap: 12px; font-size: var(--кегль-кикер); font-weight: 600; }
+  #экран-04 .кикер-линия::before { content: ""; width: 32px; height: 2px; }
+  #экран-04 .хвост { display: block; margin-top: 6px; font-size: var(--кегль-цифра); line-height: 1.2; }
+  #экран-04 .кто { font-size: var(--кегль-текст); }
+  #экран-04 .кто b { font-weight: 700; }
+  #экран-04 .текст { display: grid; gap: 14px; margin-top: 10px; }
+  #экран-04 .текст p { font-size: var(--кегль-текст); line-height: 1.65; }
+  #экран-04 .вехи { display: flex; flex-wrap: wrap; margin-top: 18px; }
+  #экран-04 .веха { padding: 0 20px; display: grid; gap: 4px; }
+  #экран-04 .веха:first-child { padding-left: 0; }
+  #экран-04 .веха b { font-size: var(--кегль-лид); line-height: 1.2; }
+  #экран-04 .веха span { font-size: var(--кегль-мелкий); }
+  #экран-04 .портрет { position: relative; margin: 0; }
+  #экран-04 .портрет { aspect-ratio: 4 / 5; overflow: hidden; border-radius: var(--радиус-карточки); }
+  #экран-04 .портрет img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 15%; }
+  #экран-04 .портрет .плашка { position: absolute; left: 14px; right: 14px; bottom: 14px; justify-content: center; font-size: var(--кегль-мелкий); }
+
+  #экран-04.тёмный .кикер-линия { color: var(--цвет-тёплый-мягкий); }
+  #экран-04.тёмный .кикер-линия::before { background: var(--цвет-тёплый-мягкий); }
+  #экран-04.тёмный .хвост { color: var(--цвет-тёплый-мягкий); }
+  #экран-04.тёмный .кто, #экран-04.тёмный .текст p, #экран-04.тёмный .веха span { color: color-mix(in srgb, var(--цвет-тёмный-текст) 80%, transparent); }
+  #экран-04.тёмный .кто b, #экран-04.тёмный .веха b { color: var(--цвет-тёмный-текст); }
+  #экран-04.тёмный .веха + .веха { border-left: 1px solid color-mix(in srgb, var(--цвет-тёмный-текст) 22%, transparent); }
+
+  #экран-04.светлый .кикер-линия { color: var(--цвет-акцент); }
+  #экран-04.светлый .кикер-линия::before { background: var(--цвет-тёплый); }
+  #экран-04.светлый .хвост { color: var(--цвет-тёплый); }
+  #экран-04.светлый .кто, #экран-04.светлый .текст p, #экран-04.светлый .веха span { color: var(--цвет-текст-мягкий); }
+  #экран-04.светлый .кто b, #экран-04.светлый .веха b { color: var(--цвет-текст); }
+  #экран-04.светлый .веха + .веха { border-left: 1px solid var(--цвет-линия); }
+
+  @media (max-width: 899px) {
+    #экран-04 .разворот { grid-template-columns: 1fr; }
+    #экран-04 .портрет { order: -1; }
+    #экран-04 .портрет { max-width: 420px; }
+  }
+  @media (max-width: 539px) {
+    #экран-04 .вехи { display: grid; gap: 12px; }
+    #экран-04 .веха, #экран-04 .веха:first-child { padding: 0 0 0 14px; }
+    #экран-04.тёмный .веха { border-left: 1px solid color-mix(in srgb, var(--цвет-тёмный-текст) 22%, transparent); }
+    #экран-04.светлый .веха { border-left: 1px solid var(--цвет-линия); }
+  }
