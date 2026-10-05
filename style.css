@@ -1710,8 +1710,9 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
 /* экран 03 */
 #экран-03 .место { margin: clamp(28px, 4vw, 44px) 0 0; aspect-ratio: 21 / 9; min-height: 0; border-radius: var(--радиус-карточки); }
   #экран-03 .место { display: block; overflow: hidden; }
-  #экран-03 .место picture { display: block; height: 100%; }
-  #экран-03 .место img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; }
+  #экран-03 .место { position: relative; }
+  #экран-03 .место picture { position: absolute; inset: 0; display: block; }
+  #экран-03 .место img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; object-position: 50% 0; }
   #экран-03 .лента { margin-top: clamp(24px, 3vw, 36px); }
   #экран-03 .лента .шаг b { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 12px 0 8px; font-size: var(--кегль-лид); }
   #экран-03 .лента .шаг .бейдж { font-size: var(--кегль-мелкий); font-weight: 600; }
