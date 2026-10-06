@@ -1674,7 +1674,8 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   #экран-02 .витрина { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--отступ-блока); margin-top: clamp(32px, 4vw, 48px); }
   #экран-02 .товар { flex: 0 1 calc((100% - 2 * var(--отступ-блока)) / 3); display: flex; flex-direction: column; gap: 12px;
       padding: 16px 16px 20px; border-radius: var(--радиус-карточки); text-align: center; }
-  #экран-02 .товар .заглушка-картинки { aspect-ratio: 1 / 1; border-radius: var(--радиус-малый); }
+  #экран-02 .товар .товар__фото { position: relative; margin: 0; aspect-ratio: 1 / 1; overflow: hidden; border-radius: var(--радиус-малый); }
+  #экран-02 .товар .товар__фото img { position: absolute; inset: 0; width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; }
   #экран-02 .товар__имя { margin: 8px 0 0; font-size: var(--кегль-лид); font-weight: 700; }
   #экран-02 .товар__ощущение { margin: 0; flex: 1; font-size: var(--кегль-текст); line-height: 1.5; }
   #экран-02 .товар__цена { margin: 0; font-size: var(--кегль-цифра); font-weight: 800; line-height: 1.1; }
@@ -1700,7 +1701,7 @@ h2 .хвост-акцент { display: block; font-weight: 600; font-size: .6em;
   @media (max-width: 539px) {
     #экран-02 .товар { flex-basis: 100%; display: grid; grid-template-columns: 104px 1fr; column-gap: 14px; row-gap: 6px;
         text-align: left; padding: 14px; }
-    #экран-02 .товар .заглушка-картинки { grid-row: span 3; min-height: 0; align-self: start; }
+    #экран-02 .товар .товар__фото { grid-row: span 3; min-height: 0; align-self: start; }
     #экран-02 .товар__имя { margin: 0; }
     #экран-02 .товар__цена { font-size: var(--кегль-лид); }
     #экран-02 .товар__цена span { display: inline; margin-left: 4px; }
