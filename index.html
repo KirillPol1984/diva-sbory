@@ -11,7 +11,10 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=PT+Sans:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=PT+Sans:wght@400;600&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=PT+Sans:wght@400;600&display=swap"></noscript>
+<link rel="preload" as="image" href="img/briket-ii-telefon.webp" media="(max-width: 899px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/briket-ii.webp" media="not all and (max-width: 899px)" fetchpriority="high">
 <link rel="stylesheet" href="style.css">
 <style>
 :root {
@@ -83,6 +86,10 @@
   применить();
 
   if (document.fonts && document.fonts.ready) { document.fonts.ready.then(применить); }
+
+  if (document.fonts && document.fonts.addEventListener) {
+    document.fonts.addEventListener("loadingdone", function () { ждём = ждём || requestAnimationFrame(применить); });
+  }
 
   addEventListener("resize", function () { ждём = ждём || requestAnimationFrame(применить); });
 })();
@@ -200,7 +207,7 @@
   <p class="дальше">Направление ведёт Ирина Довгалева — о ней ниже.</p>
 </div>
 </section>
-<section class="блок блок--о-себе тёмный" id="экран-04" data-тип="о-себе" data-вёрстка="своя">
+<section class="блок блок--о-себе тёмный" id="экран-04" data-тип="о-себе" data-в-подвале="Об Ирине" data-вёрстка="своя">
 <div class="блок__внутри">
   <div class="разворот">
     <div class="рассказ секция__тело">
@@ -251,6 +258,30 @@
     <div class="действие-секции"><a class="кнопка кнопка--главная" href="#экран-контакты">Заказать сбор</a></div>
   </div>
 </div>
+</section>
+<section class="блок блок--подвал светлый" id="экран-06" data-тип="подвал" data-вёрстка="своя">
+  <div class="блок__внутри">
+    <div class="подвал__сетка">
+      <div>
+        <span class="подвал__лого">Пустынь Спаса Нерукотворного</span>
+        <p class="подвал__подпись">Травяное хозяйство</p>
+      </div>
+      <div>
+        <h4>Разделы</h4>
+        <div class="подвал__ссылки подвал__разделы">
+          <a href="#экран-02">Пять сборов</a>
+          <a href="#экран-03">Откуда рецептура</a>
+          <a href="#экран-04">Об Ирине</a>
+          <a href="#экран-05">Заказ и вопросы</a>
+        </div>
+      </div>
+    </div>
+    <div class="подвал__низ">
+      <span class="пометка">БАД. Не является лекарственным средством</span>
+      <span>ООО «Маруся», ИНН 7727431034</span>
+      <span class="год">© 2026</span>
+    </div>
+  </div>
 </section>
 <div class="липкая-кнопка"><a class="кнопка кнопка--главная" href="#экран-контакты">Заказать сбор</a></div>
 <script>
