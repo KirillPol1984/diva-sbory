@@ -485,7 +485,7 @@ body.панель-с-переходом .липкая-кнопка { transition:
 #экран-04.светлый .веха { border-left: 1px solid var(--цвет-линия); }
 }
 /* экран 05 */
-#экран-05 .способы { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--отступ-блока); margin-top: clamp(28px, 3.5vw, 44px); }
+#экран-05 .способы { display: grid; grid-template-columns: minmax(0, 360px); justify-content: center; gap: var(--отступ-блока); margin-top: clamp(28px, 3.5vw, 44px); }
 #экран-05 .способ { display: flex; align-items: center; gap: 14px; padding: 20px 22px; border-radius: var(--радиус-карточки); }
 #экран-05 .способ .иконка { width: 26px; height: 26px; flex: none; }
 #экран-05 .способ b { display: block; font-size: var(--кегль-лид); }
@@ -509,7 +509,7 @@ body.панель-с-переходом .липкая-кнопка { transition:
 #экран-05.тёмный .плита b { color: var(--цвет-текст); }
 #экран-05.тёмный .плита p { color: var(--цвет-текст-мягкий); }
 @media (max-width: 899px) {
-#экран-05 .способы { grid-template-columns: 1fr; }
+#экран-05 .способы { grid-template-columns: minmax(0, 360px); }
 #экран-05 .плита { grid-template-columns: 1fr; }
 }
 /* экран 06 */
