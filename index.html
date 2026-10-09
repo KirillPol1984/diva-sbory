@@ -48,6 +48,21 @@
 @media (min-width: 900px) {
   :root { --кегль-h1: clamp(44px, 4vw, 58px); }
 }
+/* Решения владельца 09.10: на телефоне заголовок одним размером (хвост не мельче), подпись региона в шапке 14 px, телефон боком — фото не на весь экран */
+@media (max-width: 899px) {
+  #экран-1 h1 .хвост { display: inline; margin-top: 0; font-size: 1em; font-weight: inherit; line-height: inherit; }
+  #экран-1 .шапка__лиц { font-size: 14px; }
+}
+@media (max-width: 899px) and (orientation: landscape) {
+  #экран-1 .первый-экран__картинка { height: 34svh; aspect-ratio: auto; margin-bottom: -2em; }
+  #экран-1 .первый-экран__текст { gap: 12px; }
+  #экран-1 .кикер { align-self: flex-start; }
+  #экран-1 .первый-экран__картинка img { height: 100%; object-fit: cover; }
+}
+@media (max-width: 899px) and (orientation: landscape) and (max-height: 380px) {
+  #экран-1 .первый-экран__картинка { height: 20svh; }
+  #экран-1 h1 { font-size: 28px; }
+}
 </style>
 <script>
 (function () {
@@ -106,9 +121,7 @@
   <span class="пятно пятно--1"></span><span class="пятно пятно--2"></span>
   <div class="блок__внутри" style="flex: 1;">
     <div class="первый-экран__текст">
-      <p class="кикер"><svg class="иконка" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-  <path d="M13 2L4 14h7l-1 8 9-12h-7z"/>
-</svg>Травяные сборы по монастырской рецептуре</p>
+      <p class="кикер">Травяные сборы по монастырской рецептуре</p>
       <h1>Пять монастырских сборов<span class="делитель"> —</span> <span class="хвост">для лёгкости, баланса и <em class="акцент">обновления</em></span></h1>
       <p class="лид">Сборы по рецептуре игумена Михаила из Пустыни Спаса Нерукотворного; каждый сбор назван по ощущению, а не по диагнозу</p>
       <ul class="список-иконок">
@@ -133,35 +146,35 @@
   </div>
   <div class="витрина секция__тело">
     <article class="товар">
-      <figure class="фото товар__фото"><img src="img/sbor-lyogkost.webp" alt="Прессованный брикет сбора «Лёгкость» на крафт-бумаге" width="720" height="720" loading="lazy"></figure>
+      <figure class="фото товар__фото"><img src="img/sbor-lyogkost.webp" srcset="img/sbor-lyogkost-360.webp 360w, img/sbor-lyogkost.webp 720w" sizes="(max-width: 599px) 30vw, 380px" alt="Прессованный брикет сбора «Лёгкость» на крафт-бумаге" width="720" height="720" loading="lazy"></figure>
       <h3 class="товар__имя">«Лёгкость»</h3>
       <p class="товар__ощущение">Когда хочется лёгкости во всём теле</p>
       <p class="товар__цена">3 000 ₽<span>за 100 г</span></p>
       <a class="кнопка" href="#экран-контакты">Заказать «Лёгкость»</a>
     </article>
     <article class="товар">
-      <figure class="фото товар__фото"><img src="img/sbor-legkie-nogi.webp" alt="Прессованный брикет сбора «Лёгкие ноги» на крафт-бумаге" width="720" height="720" loading="lazy"></figure>
+      <figure class="фото товар__фото"><img src="img/sbor-legkie-nogi.webp" srcset="img/sbor-legkie-nogi-360.webp 360w, img/sbor-legkie-nogi.webp 720w" sizes="(max-width: 599px) 30vw, 380px" alt="Прессованный брикет сбора «Лёгкие ноги» на крафт-бумаге" width="720" height="720" loading="lazy"></figure>
       <h3 class="товар__имя">«Лёгкие ноги»</h3>
       <p class="товар__ощущение">Для лёгкости в ногах к вечеру</p>
       <p class="товар__цена">3 000 ₽<span>за 100 г</span></p>
       <a class="кнопка" href="#экран-контакты">Заказать «Лёгкие ноги»</a>
     </article>
     <article class="товар">
-      <figure class="фото товар__фото"><img src="img/sbor-komfort.webp" alt="Прессованный брикет сбора «Комфорт» на крафт-бумаге" width="720" height="720" loading="lazy"></figure>
+      <figure class="фото товар__фото"><img src="img/sbor-komfort.webp" srcset="img/sbor-komfort-360.webp 360w, img/sbor-komfort.webp 720w" sizes="(max-width: 599px) 30vw, 380px" alt="Прессованный брикет сбора «Комфорт» на крафт-бумаге" width="720" height="720" loading="lazy"></figure>
       <h3 class="товар__имя">«Комфорт»</h3>
       <p class="товар__ощущение">Для спокойного самочувствия после еды</p>
       <p class="товар__цена">3 000 ₽<span>за 100 г</span></p>
       <a class="кнопка" href="#экран-контакты">Заказать «Комфорт»</a>
     </article>
     <article class="товар">
-      <figure class="фото товар__фото"><img src="img/sbor-balans.webp" alt="Прессованный брикет сбора «Баланс» на крафт-бумаге" width="720" height="720" loading="lazy"></figure>
+      <figure class="фото товар__фото"><img src="img/sbor-balans.webp" srcset="img/sbor-balans-360.webp 360w, img/sbor-balans.webp 720w" sizes="(max-width: 599px) 30vw, 380px" alt="Прессованный брикет сбора «Баланс» на крафт-бумаге" width="720" height="720" loading="lazy"></figure>
       <h3 class="товар__имя">«Баланс»</h3>
       <p class="товар__ощущение">Для свежести в течение дня</p>
       <p class="товар__цена">3 000 ₽<span>за 100 г</span></p>
       <a class="кнопка" href="#экран-контакты">Заказать «Баланс»</a>
     </article>
     <article class="товар">
-      <figure class="фото товар__фото"><img src="img/sbor-obnovlenie.webp" alt="Прессованный брикет сбора «Обновление» на крафт-бумаге" width="720" height="720" loading="lazy"></figure>
+      <figure class="фото товар__фото"><img src="img/sbor-obnovlenie.webp" srcset="img/sbor-obnovlenie-360.webp 360w, img/sbor-obnovlenie.webp 720w" sizes="(max-width: 599px) 30vw, 380px" alt="Прессованный брикет сбора «Обновление» на крафт-бумаге" width="720" height="720" loading="lazy"></figure>
       <h3 class="товар__имя">«Обновление»</h3>
       <p class="товар__ощущение">Когда хочется начать с чистого листа</p>
       <p class="товар__цена">3 000 ₽<span>за 100 г</span></p>
@@ -207,7 +220,7 @@
   <p class="дальше">Направление ведёт Ирина Довгалева — о ней ниже.</p>
 </div>
 </section>
-<section class="блок блок--о-себе тёмный" id="экран-04" data-тип="о-себе" data-в-подвале="Об Ирине" data-вёрстка="своя">
+<section class="блок блок--о-себе тёмный" id="экран-04" data-тип="о-себе" data-вёрстка="своя" data-в-подвале="Об Ирине">
 <div class="блок__внутри">
   <div class="разворот">
     <div class="рассказ секция__тело">
