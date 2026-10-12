@@ -390,24 +390,28 @@ body.панель-с-переходом .липкая-кнопка { transition:
       padding: 16px 16px 20px; border-radius: var(--радиус-карточки); text-align: center; }
 #экран-02 .товар .товар__фото { position: relative; margin: 0; aspect-ratio: 1 / 1; overflow: hidden; border-radius: var(--радиус-малый); }
 #экран-02 .товар .товар__фото img { position: absolute; inset: 0; width: 100%; height: 100%; aspect-ratio: auto; object-fit: cover; }
+#экран-02 .товар__метка { position: absolute; left: 8px; bottom: 8px; z-index: 1; padding: 2px 8px; border-radius: var(--радиус-малый);
+      background: color-mix(in srgb, var(--цвет-тёмный-фон) 80%, transparent); color: var(--цвет-тёмный-текст);
+      font-size: var(--кегль-мелкий); line-height: 1.4; }
 #экран-02 .товар__имя { margin: 8px 0 0; font-size: var(--кегль-лид); font-weight: 700; }
 #экран-02 .товар__ощущение { margin: 0; flex: 1; font-size: var(--кегль-текст); line-height: 1.5; }
 #экран-02 .товар__цена { margin: 0; font-size: var(--кегль-цифра); font-weight: 800; line-height: 1.1; }
 #экран-02 .товар__цена span { display: block; margin-top: 2px; font-size: var(--кегль-мелкий); font-weight: 400; }
 #экран-02 .товар .кнопка { width: 100%; border-radius: var(--кнопка-радиус); font-size: var(--кегль-мелкий); box-shadow: none; }
 #экран-02 .пояснение { margin: clamp(24px, 3vw, 36px) 0 0; text-align: center; font-size: var(--кегль-текст); }
+#экран-02 .пояснение--макет { margin-top: 8px; font-size: var(--кегль-мелкий); }
 #экран-02 .действие-секции { display: flex; justify-content: center; margin-top: 20px; }
 #экран-02.светлый .товар { background: var(--цвет-фон-карточки); border: 1px solid var(--цвет-линия); box-shadow: var(--тень); }
 #экран-02.светлый .товар__имя { color: var(--цвет-текст); }
 #экран-02.светлый .товар__ощущение, #экран-02.светлый .товар__цена span, #экран-02.светлый .пояснение { color: var(--цвет-текст-мягкий); }
 #экран-02.светлый .товар__цена { color: var(--цвет-акцент); }
-#экран-02.светлый .товар .кнопка { background: var(--цвет-акцент); color: var(--цвет-на-акценте); }
-#экран-02.светлый .товар .кнопка:hover { background: var(--цвет-акцент-глубже); }
+#экран-02.светлый .товар .кнопка { background: var(--цвет-кнопки, var(--цвет-акцент)); color: var(--цвет-на-кнопке, var(--цвет-на-акценте)); }
+#экран-02.светлый .товар .кнопка:hover { background: var(--цвет-кнопки-навёл, var(--цвет-акцент-глубже)); }
 #экран-02.тёмный .товар { background: color-mix(in srgb, var(--цвет-тёмный-текст) 7%, transparent); border: 1px solid color-mix(in srgb, var(--цвет-тёмный-текст) 16%, transparent); }
 #экран-02.тёмный .товар__имя { color: var(--цвет-тёмный-текст); }
 #экран-02.тёмный .товар__ощущение, #экран-02.тёмный .товар__цена span, #экран-02.тёмный .пояснение { color: color-mix(in srgb, var(--цвет-тёмный-текст) 80%, transparent); }
 #экран-02.тёмный .товар__цена { color: var(--цвет-акцент-яркий); }
-#экран-02.тёмный .товар .кнопка { background: var(--цвет-акцент-яркий); color: var(--цвет-тёмный-фон); }
+#экран-02.тёмный .товар .кнопка { background: var(--цвет-кнопки, var(--цвет-акцент-яркий)); color: var(--цвет-на-кнопке, var(--цвет-тёмный-фон)); }
 @media (max-width: 899px) {
 #экран-02 .товар { flex-basis: calc((100% - var(--отступ-блока)) / 2); }
 }
