@@ -539,6 +539,8 @@ body.панель-с-переходом .липкая-кнопка { transition:
 #экран-06.тёмный .подвал__низ .пометка { color: color-mix(in srgb, var(--цвет-тёмный-текст) 82%, transparent); }
 @media (max-width: 899px) {
 #экран-06 .подвал__сетка { grid-template-columns: 1fr; }
+#экран-06 .подвал__ссылки { gap: 0; }
+#экран-06 .подвал__ссылки a { padding: 11px 0; }
 #экран-06 .подвал__низ { flex-direction: column; gap: 6px; }
 #экран-06 .подвал__низ .год { margin-left: 0; }
 }
